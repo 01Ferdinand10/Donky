@@ -8,7 +8,7 @@ https://drive.google.com/file/d/1rG7zRGh0V5o6Dp08meXwG7GWV8IKAQHG/view?usp=shari
 Remember: 
 Play close attention to where you save the classes and to reference them well.
 
-Credits and Refences:
+## Credits and Refences:
 - Sprites:
   Thanks to Mrc-> https://www.spriters-resource.com/nintendo_64/donkeykong64/sheet/32590/
   Thanks to Zeon andBamm Luinsir Yosho-> https://www.mariomayhem.com/downloads/sprites/super_mario_bros_sprites.php
