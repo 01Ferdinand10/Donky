@@ -1121,7 +1121,8 @@ void level_1::modificar(){
 	points += 100;
 
 	Game_Data::getInstance()->setPoints(points);
-	Game_Data::getInstance()->setTotal(points);
+	int po = Game_Data::getInstance()->getTotal();
+	Game_Data::getInstance()->setTotal(po + points);
 
 	label->setString(std::to_string(points));
 }
