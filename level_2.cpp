@@ -1197,8 +1197,6 @@ void level_2::modificar() {
 	points += 100;
 
 	Game_Data::getInstance()->setPoints(points);
-	int po = Game_Data::getInstance()->getTotal();
-	Game_Data::getInstance()->setTotal(po + points);
 
 	label->setString(std::to_string(points));
 }
@@ -1423,6 +1421,9 @@ void level_2::anadir_barril(float dt) {
 }
 
 void level_2::muerte() {
+	int pon = Game_Data::getInstance()->getPoints();
+	int pin = Game_Data::getInstance()->getTotal();
+	Game_Data::getInstance()->setTotal(pin + pon);
 	//DETENER TODO
 	perder = true;
 	mario->stopAllActions();
@@ -1458,6 +1459,9 @@ void level_2::muerte() {
 }
 
 void level_2::siguiente() {
+	int pon = Game_Data::getInstance()->getPoints();
+	int pin = Game_Data::getInstance()->getTotal();
+	Game_Data::getInstance()->setTotal(pin + pon);
 	Game_Data::getInstance()->setPoints(0);
 	Game_Data::getInstance()->setLevel3(true);
 
