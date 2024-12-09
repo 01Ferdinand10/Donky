@@ -156,6 +156,15 @@ void Manu::menuPlay2Callback(Ref* pSender) {
     menu->setEnabled(false);
     AudioEngine::stop(music_id);
     int soundID = AudioEngine::play2d("sound_press.mp3");
+    int points = Game_Data::getInstance()->getPoints();
+    int po = Game_Data::getInstance()->getTotal();
+    
+    int a = po - points;
+    if (a < 0) {
+        a = 0;
+    }
+    
+    Game_Data::getInstance()->setTotal(a);
     Game_Data::getInstance()->setPoints(0);
 
     auto espera = DelayTime::create(0.5);
