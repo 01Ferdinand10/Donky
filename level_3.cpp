@@ -839,8 +839,6 @@ bool level_3::init() {
 		points += 100;
 
 		Game_Data::getInstance()->setPoints(points);
-		int po = Game_Data::getInstance()->getTotal();
-		Game_Data::getInstance()->setTotal(po + points);
 
 		label->setString(std::to_string(points));
 	}
@@ -1056,6 +1054,10 @@ bool level_3::init() {
 	}
 
 	void level_3::muerte() {
+		int pon = Game_Data::getInstance()->getPoints();
+		int pin = Game_Data::getInstance()->getTotal();
+		Game_Data::getInstance()->setTotal(pin + pon);
+		
 		//DETENER TODO
 		perder = true;
 		mario->stopAllActions();
@@ -1091,6 +1093,9 @@ bool level_3::init() {
 	}
 
 	void level_3::siguiente() {
+		int pon = Game_Data::getInstance()->getPoints();
+		int pin = Game_Data::getInstance()->getTotal();
+		Game_Data::getInstance()->setTotal(pin + pon);
 		Game_Data::getInstance()->setPoints(0);
 
 		// DETENER TODO
