@@ -34,6 +34,7 @@ bool score::init() {
 	music_id = AudioEngine::play2d("sound_silence.mp3");
 	AudioEngine::setFinishCallback(music_id, [this](int id, const std::string& s) {
 		music_id = AudioEngine::play2d("sound_score.mp3", true);
+		AudioEngine::setVolume(music_id, 0.01f);
 		});
 
 	// Fondo
